@@ -1,0 +1,279 @@
+PR 1: Create Cloud Account and Explore Google Cloud Console
+
+STEPS:
+1. Open website - https://www.skills.google
+2. Click on "Sign in" - Select "Sign in with Google".
+3. Sign in using your Google account / college Google account.
+4. Google Skills provides free learning opportunities. Students can use the available free monthly learning credits to access Google Skills courses and hands-on labs. The current Google Cloud Innovators program provides 35 learning credits every month.
+5. After signing in to Google Skills, open the Google Cloud website - https://cloud.google.com/
+6. Click on "Sign in" at the top-right corner and sign in with your Google account.
+7. Open Google Skills again - https://www.skills.google
+8. From the left panel - Select "Catalog".
+9. In the "What you want to learn today" search box, type "cloud console" or "Google Cloud".
+10. Select a beginner Google Cloud / Cloud Console lab or learning activity available in Google Skills.
+11. Open the selected lab and click on "Start Lab".
+12. If the lab asks for credits, select "Launch with 1 Credit" or the available launch option.
+13. Wait until the lab starts successfully.
+14. The lab page will display temporary Username, Password, and Project ID. These credentials are provided for the lab.
+15. Copy the temporary "Username", "Password", and "Project ID" from the Google Skills page.
+16. Right-click on "Open Google Cloud Console" and select "Open link in new tab".
+17. The Google Cloud Console will open. The official console address is https://console.cloud.google.com.
+18. If a Google sign-in page appears, enter the temporary Username provided by Google Skills.
+19. Enter the temporary Password provided by Google Skills.
+20. Select "I Understand" if the Google Cloud welcome message is displayed.
+21. If "Terms of Service" is displayed, select the check box and click "Agree and continue".
+22. Click on "Select a Project" at the top of the Google Cloud Console.
+23. Select the Project ID provided by Google Skills, such as "qwiklabs-gcp-.....".
+24. Check the project name and Project ID shown at the top of the console before using any service.
+25. From the navigation menu (☰), explore "Compute Engine". Do not create a VM in this practical.
+26. From the navigation menu, open "Cloud Storage" and observe the available storage and bucket options. Do not create a bucket.
+27. From the navigation menu, open "IAM & Admin" and select "IAM" to view users, roles, and permissions.
+28. From the navigation menu, open "Cloud Run" and observe the service deployment options. Do not deploy a service.
+29. From the navigation menu, open "Kubernetes Engine (GKE)" and observe the cluster options. Do not create a cluster.
+30. From the navigation menu, open "Cloud Functions" / "Functions" and observe the available function options. Do not deploy a function.
+31. From the navigation menu, open "Monitoring" and explore the Cloud Monitoring dashboard and available monitoring options.
+32. From the navigation menu, open "Logging" and explore Logs Explorer.
+33. At the top-right of the Google Cloud Console, click "Activate Cloud Shell" (terminal icon).
+34. Wait for Cloud Shell to start. Cloud Shell provides a browser-based terminal with the Google Cloud CLI (gcloud) available.
+35. If an "Authorize Cloud Shell" message appears, click "Authorize".
+36. In Cloud Shell, type the following command and press Enter: gcloud auth list
+37. Verify that an active account is displayed with an asterisk (*) under ACTIVE.
+38. In Cloud Shell, type the following command and press Enter: gcloud config get-value project
+39. Verify that the correct Project ID is displayed.
+40. Students can now explore the above Google Cloud Platform (GCP) services and observe their menus, dashboards, configuration options, and basic features.
+
+
+
+PR 2:Create and configure Compute Engine VM instance
+
+STEPS:
+1.	Open website - https://www.skills.google
+2.	Click on Sign - Select Sign in with Google
+3.	From left panel - Select "Catalog"
+4.	Type "cloud virtual machine" - in "What you want to learn today" search box
+5.	Select "virtual machine" from search
+6.	Select "Create virtual machine"
+7.	Select "Start Lab"
+8.	Select "Launch with 1 Credit"
+9.	Right click on “Open Google Cloud Console” button and select “Open link in new Tab”
+10.	You can find Username, Password, and Project ID
+11.	Copy "username" and "password" from "skills.google" website
+12.	Use them to "Sign in"
+13.	Select "I Understand" button
+14.	Select check box "Terms of Service" - "Click on Agree and continue"
+15.	Click on "Select a Project" - One Dialog box will open
+16.	Select project ID such as "qwicklabs-gcp-....." if not selected.
+17.	Select “Compute Engine” from left panel.
+18.	Select “Create Instance” from top.
+19.	In Machine Configuration.
+a)	Name: linux-vm-1
+ 
+b)	Region: choose any (e.g., us-central1) or do not change.
+c)	Zone: do not change.
+20.	From options: select General Purpose
+
+a)	Series: E2
+b)	Machine type: e2-medium (Good default, low cost)
+
+
+21.	From left panel select “OS and Storage”
+22.	Click on “Change” button
+
+23.	Select bellow options:
+a)	Operating system: Ubuntu
+b)	Version: Ubuntu 22.04 LTS
+c)	Boot disk type: Balanced persistent disk
+d)	Size: 10 GB
+24.	From left panel select “Networking”
+ 
+25.	Select check box of: (If you want to run web server) Allow HTTP traffic
+Allow HTTPS traffic
+26.	Click on “Create” to create VM
+27.	Click on SSH to run Linux server in browser
+
+28.	Using SSH browser you can
+a)	Update the OS
+b)	Install / remove packages
+c)	Manage users and permissions
+29.	Select the check box against the VM name
+
+30.	Now, you can Start, Stop, Suspend (OS is not Shut down), reset (restart).
+31.	From More actions: Select “Delete”
+32.	Click on “Delete” button.
+
+
+CNA (Practical-3)
+PR 3: Create and manage Cloud Storage bucket
+STEPS:
+1. Open website - https://www.skills.google
+2. Click on Sign in - Select Sign in with Google
+3. From left panel - Select "Catalog"
+4. Type "cloud storage" in the search box
+5. Select "Cloud Storage" related lab from search results
+6. Select "Start Lab"
+7. Select "Launch with 1 Credit"
+8. Right click on "Open Google Cloud Console" and open in new tab
+9. Copy Username, Password and Project ID from Skills Boost
+10. Sign in to Google Cloud Console using the provided credentials
+11. Select "I Understand"
+12. Select the check box for "Terms of Service" - Click on "Agree and Continue"
+13. Click on "Select a Project" - Select the provided Project ID
+14. From Navigation Menu, select "Cloud Storage" → "Buckets"
+15. Click on "Create Bucket"
+16. Enter Bucket Name: static-website-bucket-unique
+17. Choose Region: us-central1 (or default)
+18. Select Standard Storage Class
+19. Choose Uniform Access Control
+20. Click on "Create"
+21. Open the created bucket
+22. Click on "Upload Files"
+23. Upload index.html file
+24. Upload style.css and image files, if any
+25. Open "Bucket Settings"
+26. Click on "Edit Website Configuration"
+27. Set Main Page: index.html
+28. Set Not Found Page: 404.html (optional)
+29. Click on "Save Changes"
+30. Go to "Permissions" tab
+31. Grant access to allUsers with Storage Object Viewer role
+32. Confirm "Public Access"
+33. Open "Objects" tab and verify the uploaded files
+34. Click on the website URL or public URL
+35. Verify that the static website loads successfully
+36. Modify the HTML file and re-upload it to test updates
+37. After verification, delete the uploaded files if required
+38. Delete the bucket to avoid unnecessary resource usage
+
+
+CNA (Practical-4)
+
+PR 4: Configure IAM Users, Roles, and Service Accounts
+
+STEPS:
+1. Open website - https://www.skills.google
+2. Click on Sign - Select "Sign in with Google".
+3. From the left panel - Select "Catalog".
+4. Type "IAM" or "Identity and Access Management" in the "What you want to learn today" search box.
+5. Select a suitable IAM lab related to users, roles, or service accounts.
+6. Select "Start Lab".
+7. Select "Launch with 1 Credit" if the lab provides this option.
+8. Right click on "Open Google Cloud Console" and select "Open link in new Tab".
+9. You can find Username, Password, and Project ID on the Skills Boost page.
+10. Copy the temporary Username and Password from the Skills Boost page.
+11. Use them to sign in to the Google Cloud Console.
+12. Select "I Understand" if shown.
+
+
+13. Select the check box for "Terms of Service" and click "Agree and continue" if shown.
+14. Click on "Select a Project" and select the temporary project ID such as "qwiklabs-gcp-.....".
+15. From the Google Cloud Console, open "IAM & Admin".
+16. Select "IAM".
+17. Observe the list of IAM principals. A principal can be a user, group, service account, or other supported identity.
+18. Review the roles already assigned to the principals.
+19. Do not use basic roles such as Owner, Editor, or Viewer when a more limited predefined role is sufficient.
+20. Click "Grant Access" or "Grant access" to add a principal.
+21. In "New principals", enter the test user/principal provided by the lab, if available.
+22. Under "Assign roles", select a predefined role with only the permissions required for the activity. For example, use a service-specific Viewer role instead of the broad Viewer basic role.
+23. Click "Save".
+24. Check the IAM table and confirm that the principal now has the limited role.
+
+
+25. Open "IAM & Admin" and select "Service Accounts".
+26. Click "Create Service Account".
+27. Enter a simple name, for example: "cna-practical4-sa".
+28. Enter a short description such as "Test service account for IAM practical".
+29. Click "Create and Continue".
+30. Grant only the minimum predefined role required by the lab/activity. Do not give Owner or Editor unless the lab specifically requires it.
+31. Click "Continue" and then "Done".
+32. Open the newly created service account and review its details and assigned permissions.
+33. Do NOT create or download a service account key. Use the service account through Google Cloud IAM instead.
+34. Go back to "IAM & Admin" and open "IAM Recommender" if it is available.
+35. Review the concept of IAM Recommender: it can suggest reducing or changing permissions that appear unnecessary.
+36. Open "Policy Analyzer" if it is available in the lab/project.
+
+
+37. Review the concept of Policy Analyzer: it helps analyze who has access to which Google Cloud resources through IAM policies.
+38. Return to the IAM page and review the temporary access added during the practical.
+39. Remove the temporary/test principal or role that is no longer required.
+40. Go to "IAM & Admin" → "Service Accounts".
+41. Select the test service account "cna-practical4-sa" or the service account created during the lab.
+42. Click "Delete" and confirm the deletion of the test service account.
+43. Verify that the temporary IAM access and test service account have been removed.
+
+Note: Use only the temporary project and credentials provided by the lab. Give principals and service accounts the least privilege required, and remove test access after completing the practical.
+
+
+CNA (Practical-5)
+
+PR 5: Create Docker Images and Run Containers on Cloud VM
+
+STEPS:
+1. Open website - https://www.skills.google
+2. Click on Sign - Select "Sign in with Google".
+3. From the left panel - Select "Catalog".
+4. Type "Docker" or "Docker containers" in the "What you want to learn today" search box.
+5. Select a suitable lab related to running Docker containers on a Google Cloud VM.
+6. Select "Start Lab".
+7. Select "Launch with 1 Credit" if the lab provides this option.
+8. Right click on "Open Google Cloud Console" and select "Open link in new Tab".
+9. You can find Username, Password, and Project ID on the Skills Boost page.
+10. Copy the temporary Username and Password from the Skills Boost page.
+11. Use them to sign in to the Google Cloud Console.
+12. Select "I Understand" if shown.
+13. Select the check box for "Terms of Service" and click "Agree and continue" if shown.
+14. Click on "Select a Project" and select the temporary project ID such as "qwiklabs-gcp-.....".
+15. Select "Compute Engine" from the left panel.
+16. Select "VM instances".
+17. Select the VM created for the Docker practical. If no VM is available, create a small Linux VM using the lab instructions.
+18. Click on "SSH" to open the Linux terminal in the browser.
+19. Check whether Docker is already installed by typing: docker --version
+20. If Docker is not installed, install Docker Engine using the commands/instructions provided by the lab.
+21. After installation, verify Docker by typing: docker --version
+22. Create a new folder for the Node.js application by typing: mkdir docker-node-app
+23. Move into the folder by typing: cd docker-node-app
+24. Create a Node.js application file by typing: nano app.js
+25. Enter the following simple Node.js application code:
+const http = require("http");
+const server = http.createServer((req, res) => { res.end("Hello from Docker on Cloud VM!"); });
+server.listen(3000, "0.0.0.0", () => console.log("Server running on port 3000"));
+29. Save the file and exit the editor.
+30. Create a package file by typing: nano package.json
+31. Enter the following content: {"scripts":{"start":"node app.js"}}
+32. Save the file and exit the editor.
+33. Create a Dockerfile by typing: nano Dockerfile
+34. Enter the following Dockerfile instructions:
+FROM node:20-alpine
+WORKDIR /app
+COPY package.json .
+COPY app.js .
+EXPOSE 3000
+CMD ["npm", "start"]
+41. Save the Dockerfile and exit the editor.
+42. Create a .dockerignore file by typing: nano .dockerignore
+43. Add the following entries: node_modules and npm-debug.log
+44. Save the file and exit the editor.
+45. Check the files in the folder by typing: ls -la
+46. Build a Docker image by typing: docker build -t node-cloud-app .
+47. Wait for the image build to complete successfully.
+48. Check the created image by typing: docker images
+49. Run a container from the image and map VM port 3000 to container port 3000 by typing: docker run -d --name node-container -p 3000:3000 node-cloud-app
+50. Check the running container by typing: docker ps
+51. Test the application from inside the VM by typing: curl http://localhost:3000
+52. You should see the message: Hello from Docker on Cloud VM!
+53. View the container logs by typing: docker logs node-container
+54. Open a shell inside the running container by typing: docker exec -it node-container sh
+55. Inside the container, type: ls
+56. Type: exit to leave the container shell.
+57. Inspect the container configuration by typing: docker inspect node-container
+58. Stop the container by typing: docker stop node-container
+59. Check stopped containers by typing: docker ps -a
+60. Remove the stopped container by typing: docker rm node-container
+61. Check the Docker images by typing: docker images
+62. Remove the test image by typing: docker rmi node-cloud-app
+63. Verify that the test container and image have been removed by typing: docker ps -a and docker images
+64. Clean up any remaining temporary Docker resources created during the practical, if required by the lab.
+65. Close the SSH session after completing the practical.
+
+Note: Use the temporary Cloud Skills Boost project and VM only. Do not use production resources. Stop/remove the test container and image after completing the practical.
+
+
